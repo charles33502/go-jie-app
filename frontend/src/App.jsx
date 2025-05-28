@@ -1,52 +1,28 @@
-// src/App.jsx
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [message, setMessage] = useState('Loading...')
 
-  // 這裡就是向後端 /api/ 發出請求
+  // 🧠 根據是本地開發還是正式部署，自動切換後端 URL
+  const apiUrl = import.meta.env.DEV
+    ? '/api/' // 本地開發用 proxy
+    : 'https://go-jie-app.onrender.com/' // 部署用 Render 雲端網址
+
   useEffect(() => {
-    fetch('/api/')               // proxy 會把它導到 http://localhost:5000/
+    fetch(apiUrl)
       .then(res => res.json())
       .then(data => setMessage(data.message))
-      .catch(err => {
-        console.error(err)
-        setMessage('Error fetching data')
-      })
+      .catch(() => setMessage('後端無回應'))
   }, [])
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
       <h1>Vite + React</h1>
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-
-      {/* 這裡顯示後端回傳的訊息 */}
-      <p style={{ marginTop: '2rem' }}>
-        後端回傳：<strong>{message}</strong>
-      </p>
-
-      <p className="read-the-docs">
-        Edit <code>src/App.jsx</code> and save to test HMR
-      </p>
+      <p>後端回傳：{message}</p>
     </>
   )
 }
 
 export default App
+
