@@ -1,28 +1,47 @@
-import { useEffect, useState } from 'react'
-import './App.css'
+// frontend/src/App.jsx
+import { useState } from 'react'
 
 function App() {
-  const [message, setMessage] = useState('Loading...')
+  const [answer, setAnswer] = useState('')
+  const [feedback, setFeedback] = useState('')
+  const [loading, setLoading] = useState(false)
 
-  // 🧠 根據是本地開發還是正式部署，自動切換後端 URL
   const apiUrl = import.meta.env.DEV
-    ? '/api/' // 本地開發用 proxy
-    : 'https://go-jie-app.onrender.com/' // 部署用 Render 雲端網址
+    ? '/api/submit'
+    : 'https://go-jie-app.onrender.com/submit'
 
-  useEffect(() => {
-    fetch(apiUrl)
-      .then(res => res.json())
-      .then(data => setMessage(data.message))
-      .catch(() => setMessage('後端無回應'))
-  }, [])
+  const handleSubmit = async () => {
+    setLoading(true)
+    try {
+      const res = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ answer })
+      })
+      const data = await res.json()
+      setFeedback(data.feedback)
+    } catch {
+      setFeedback('後端無回應')
+    }
+    setLoading(false)
+  }
 
   return (
-    <>
-      <h1>Vite + React</h1>
-      <p>後端回傳：{message}</p>
-    </>
+    <div style={{ padding: '2rem' }}>
+      <h1>定石判斷練習</h1>
+      <img src="/example-joseki.png" alt="定石圖示" style={{ width: 300 }} />
+      <p>你認為這組定石對哪方有利？為什麼？</p>
+      <input
+        type="text"
+        value={answer}
+        onChange={e => setAnswer(e.target.value)}
+        style={{ width: '300px' }}
+        placeholder="請輸入你的想法..."
+      />
+      <button onClick={handleSubmit} disabled={loading}>送出</button>
+      <p>系統回饋：{feedback}</p>
+    </div>
   )
 }
 
 export default App
-
