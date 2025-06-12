@@ -35,6 +35,7 @@ def call_gemini(prompt):
       return reply
     except requests.exceptions.HTTPError as e:
       print("API 出錯：", e)
+      print("錯誤內容：", res.text)  # 幫助你 debug API 錯誤
       return "AI 回覆失敗"
 
 @app.route("/questions", methods=["GET"])
