@@ -1,0 +1,12 @@
+# 不要把環境變數檔上傳
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Flask debug log
+*.log
+
+# VSCode 工作目錄
+.vscode/
