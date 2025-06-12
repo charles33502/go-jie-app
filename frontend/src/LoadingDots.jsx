@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 function LoadingDots() {
   const [dots, setDots] = useState("");
 
@@ -12,4 +13,4 @@ function LoadingDots() {
   return <span>{dots}</span>;
 }
 
-export default LoadingDots;
+export default LoadingDots
