@@ -9,6 +9,7 @@ function App() {
   const [questions, setQuestions] = useState([])
   const [selectedQid, setSelectedQid] = useState(null)
   const [page, setPage] = useState('problems')  // 'tutorial' or 'problems'
+  const [serverloading, setserverLoading] = useState(true) //  新增 serverloading 狀態
 
 
   useEffect(() => {
@@ -22,6 +23,9 @@ function App() {
         console.error('載入題庫失敗：', err)
         setQuestions([])
       })
+      .finally(() => {
+      setserverLoading(false) // ✅ 無論成功失敗都結束 loading
+    })
   }, [])
 
   const selectedQuestion = questions.find(q => q.qid === selectedQid)
@@ -84,14 +88,15 @@ function App() {
       <div style={{ flex: 1, padding: '20px' }}>
         <h1>定石互動學習平台</h1>
         {page === 'tutorial' && <Tutorial />}
-        {page !== 'tutorial' && selectedQuestion && (
+        {serverloading && (<p>🚀 伺服器喚醒中，請稍候幾秒...</p> )}
+        {serverloading && page !== 'tutorial' && selectedQuestion && (
         <ProblemCard
          qid={selectedQuestion.qid}
          prompt={selectedQuestion.prompt}
          sgf={selectedQuestion.sgf}
         />
         )}
-        {page !== 'tutorial' && !selectedQuestion && (
+        {serverloading && page !== 'tutorial' && !selectedQuestion && (
          <p>請選擇一個題目</p>
         )}
       </div>
