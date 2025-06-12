@@ -1,4 +1,5 @@
-flask
-flask-restful
-flask-cors
-
+Flask
+flask_cors
+requests
+python-dotenv
+gunicorn
