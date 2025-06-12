@@ -15,7 +15,7 @@ function Tutorial() {
        <p>參考資料:</p>
       <ul>
         <li>日本棋院:<a href="https://www.nihonkiin.or.jp/teach/lesson/school/syoubu.html">https://www.nihonkiin.or.jp/teach/lesson/school/syoubu.html</a></li>
-        <li>《初級定石》 石田芳夫著 吳 仁譯 世界文物出版社</li>
+        <li>《初級定石》 石田芳夫著 吳仁譯 世界文物出版社</li>
       </ul>
       
       
