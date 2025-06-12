@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import ProblemCard from './ProblemCard'
 import { BACKEND_URL } from './config'
 import Tutorial from './Tutorial'  // 匯入教學頁
-
+import LoadingDots from './LoadingDots'
 
 function App() {
   const [questions, setQuestions] = useState([])
@@ -88,7 +88,7 @@ function App() {
       <div style={{ flex: 1, padding: '20px' }}>
         <h1>定石互動學習平台</h1>
         {page === 'tutorial' && <Tutorial />}
-        {serverloading && (<p>🚀 伺服器喚醒中，請稍候幾秒...</p> )}
+        {serverloading && (<p>🚀 伺服器喚醒中，請稍候幾秒<LoadingDots /></p> )}
         {!serverloading && page !== 'tutorial' && selectedQuestion && (
         <ProblemCard
          qid={selectedQuestion.qid}
