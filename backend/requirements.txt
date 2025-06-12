@@ -1,7 +1,4 @@
 flask
 flask-restful
-<<<<<<< HEAD
 flask-cors
-=======
-flask-cors
->>>>>>> bacd31a8cbe319e211f93ec985a8104ef7fe3d7d
+
