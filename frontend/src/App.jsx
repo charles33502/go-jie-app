@@ -89,14 +89,14 @@ function App() {
         <h1>定石互動學習平台</h1>
         {page === 'tutorial' && <Tutorial />}
         {serverloading && (<p>🚀 伺服器喚醒中，請稍候幾秒...</p> )}
-        {serverloading && page !== 'tutorial' && selectedQuestion && (
+        {!serverloading && page !== 'tutorial' && selectedQuestion && (
         <ProblemCard
          qid={selectedQuestion.qid}
          prompt={selectedQuestion.prompt}
          sgf={selectedQuestion.sgf}
         />
         )}
-        {serverloading && page !== 'tutorial' && !selectedQuestion && (
+        {!serverloading && page !== 'tutorial' && !selectedQuestion && (
          <p>請選擇一個題目</p>
         )}
       </div>
