@@ -9,7 +9,7 @@ load_dotenv()  # ✅ 載入 .env 檔案
 
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173"])
+CORS(app, origins=["http://localhost:5173","https://go-joseki-interactive.vercel.app"])
 
 
 # ✅ Gemini 題庫（含分析摘要）
