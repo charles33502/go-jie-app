@@ -43,7 +43,7 @@ python app.py
 # 📄 License
 本專案採用 MIT License 授權，詳見 LICENSE 檔案。
 
-# ✨ 開發者
+# 開發者
 陳彥辰（專題設計、前後端整合）
 
 
