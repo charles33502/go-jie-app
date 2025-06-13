@@ -86,7 +86,7 @@ function App() {
 
       {/* 右側題目顯示 */}
       <div style={{ flex: 1, padding: '20px' }}>
-        <h1>定石互動學習平台</h1>
+        <h1>圍棋定石AI互動平台</h1>
         {page === 'tutorial' && <Tutorial />}
         {serverloading && (<h3>🚀 伺服器喚醒中，請稍候幾秒<LoadingDots /></h3> )}
         {!serverloading && page !== 'tutorial' && selectedQuestion && (
