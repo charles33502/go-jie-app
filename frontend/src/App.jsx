@@ -43,7 +43,7 @@ function App() {
        <button     
        onClick={() => {
          setPage('tutorial')
-         setSelectedQid(null)  // 👈 清除選中的題目
+         setSelectedQid(null)  //  清除選中的題目
           }}  
        style={{
         width: '100%', 
@@ -65,7 +65,7 @@ function App() {
               <button
                 onClick={() => {
                  setSelectedQid(q.qid)
-                 setPage('problems')   // 👈 點題目時切回題目頁
+                 setPage('problems')   // 點題目時切回題目頁
                  }}
                 style={{
                   width: '100%',
@@ -88,7 +88,7 @@ function App() {
       <div style={{ flex: 1, padding: '20px' }}>
         <h1>定石互動學習平台</h1>
         {page === 'tutorial' && <Tutorial />}
-        {serverloading && (<p>🚀 伺服器喚醒中，請稍候幾秒<LoadingDots /></p> )}
+        {serverloading && (<h3>🚀 伺服器喚醒中，請稍候幾秒<LoadingDots /></h3> )}
         {!serverloading && page !== 'tutorial' && selectedQuestion && (
         <ProblemCard
          qid={selectedQuestion.qid}
