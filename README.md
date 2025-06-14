@@ -7,6 +7,13 @@
 - 體驗網站：https://go-joseki-interactive.vercel.app
 - ⏳ *由於後端使用免費平台，初次開啟可能需等待伺服器喚醒*
 - 本專案後端已部署於 Render，透過 Flask 提供 API 服務（不開放直接存取）
+  
+## 📽️ 影片介紹
+
+[![觀看介紹影片](https://img.youtube.com/vi/kiUH-brnqGY/0.jpg)](https://www.youtube.com/watch?v=kiUH-brnqGY)
+
+👉 點擊圖片即可觀看完整介紹。
+
 
 ## 功能特色
 
