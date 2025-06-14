@@ -7,7 +7,7 @@
 - 體驗網站：https://go-joseki-interactive.vercel.app
 - ⏳ *由於後端使用免費平台，初次開啟可能需等待伺服器喚醒*
 - 本專案後端已部署於 Render，透過 Flask 提供 API 服務（不開放直接存取）
-
+<iframe width="903" height="508" src="https://www.youtube.com/embed/kiUH-brnqGY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ## 功能特色
 
 - 📚 題庫導覽：支援題目切換與目錄導覽
