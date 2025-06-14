@@ -16,8 +16,17 @@
 
 ## 📸 平台截圖
 
-<img src="frontend/src/assets/Goborad.png" alt="平台截圖" width="50%" />
-<img src="frontend/src/assets/AIexplain.png" alt="平台截圖" width="50%" />
+<table>
+  <tr>
+    <td>
+      <img src="frontend/src/assets/Goborad.png" alt="平台截圖" width="300"/>
+    </td>
+    <td>
+      <img src="frontend/src/assets/AIexplain.png" alt="平台截圖" width="300"/>
+    </td>
+  </tr>
+</table>
+
 ## 功能特色
 
 - 📚 題庫導覽：支援題目切換與目錄導覽
