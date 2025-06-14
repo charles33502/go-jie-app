@@ -61,7 +61,7 @@ cd backend
 pip install -r requirements.txt
 python app.py
 ```
-請自行設定 .env 以連接 Gemini API。
+請在 backend/.env 中設定 GEMINI_API_KEY。注意：本專案不會公開金鑰，請自行註冊。
 
 # 📄 License
 本專案採用 MIT License 授權，詳見 LICENSE 檔案。
