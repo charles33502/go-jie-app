@@ -16,8 +16,8 @@
 
 ## 📸 平台截圖
 
-<img src="frontend/src/assets/AIexplain.png" "frontend/src/assets/AIexplain.png" alt="平台截圖" width="50%" />
-
+<img src="frontend/src/assets/AIexplain.png" alt="平台截圖" width="50%" />
+<img src="frontend/src/assets/AIexplain.png" alt="平台截圖" width="50%" />
 ## 功能特色
 
 - 📚 題庫導覽：支援題目切換與目錄導覽
