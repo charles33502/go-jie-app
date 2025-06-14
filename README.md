@@ -25,6 +25,14 @@
       <img src="frontend/src/assets/AIexplain.png" alt="平台截圖" width="300"/>
     </td>
   </tr>
+  <tr>
+    <td>
+      平台棋盤樣式
+    </td>
+    <td>
+      AI即時回饋功能
+    </td>
+  </tr>
 </table>
 
 ## 功能特色
