@@ -16,7 +16,7 @@
 
 ## 📸 平台截圖
 
-<img src="frontend/src/assets/AIexplain.png" alt="平台截圖" width="60%" />
+<img src="frontend/src/assets/AIexplain.png" "frontend/src/assets/AIexplain.png" alt="平台截圖" width="50%" />
 
 ## 功能特色
 
