@@ -24,7 +24,7 @@ function App() {
         setQuestions([])
       })
       .finally(() => {
-      setserverLoading(false) // ✅ 無論成功失敗都結束 loading
+      setserverLoading(false) //  無論成功失敗都結束 loading
     })
   }, [])
 

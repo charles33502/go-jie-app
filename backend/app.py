@@ -5,7 +5,7 @@ import requests
 import os
 import traceback
 from dotenv import load_dotenv
-load_dotenv()  # ✅ 載入 .env 檔案
+load_dotenv()  #  載入 .env 檔案
 
 
 app = Flask(__name__)
@@ -23,7 +23,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 
 def call_gemini(prompt):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+    url = f"""https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"""
     headers = {"Content-Type": "application/json"}
     data = {
         "contents": [{"parts": [{"text": prompt}]}]
@@ -35,7 +35,7 @@ def call_gemini(prompt):
       return reply
     except requests.exceptions.HTTPError as e:
       print("API 出錯：", e)
-      print("錯誤內容：", res.text)  # 幫助你 debug API 錯誤
+      print("錯誤內容：", res.text)  # 幫助 debug API 錯誤
       return "AI 回覆失敗"
 
 @app.route("/questions", methods=["GET"])
@@ -44,7 +44,7 @@ def get_questions():
         {
             "qid": qid,
             "prompt": q["prompt"],
-            "sgf": q["sgf"],  # ✅ 直接從 JSON 內取出 SGF 原文
+            "sgf": q["sgf"],  #  直接從 JSON 內取出 SGF 原文
         }
         for qid, q in questions_gemini.items()
     ])
