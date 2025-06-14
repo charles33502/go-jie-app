@@ -26,7 +26,7 @@
     </td>
   </tr>
   <tr>
-    <td align="center">平台模盤樣式</td>
+    <td align="center">平台棋盤樣式</td>
     <td align="center">AI 即時回饋功能</td>
   </tr>
 </table>
