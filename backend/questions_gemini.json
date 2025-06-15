@@ -38,7 +38,7 @@
   {
     "id": 4,
     "prompt": "此定石，黑子白子下完後分別有甚麼優勢？",
-    "sgf": "(;GM[1]FF[4]CA[UTF-8]AP[Sabaki:0.52.2]KM[6.5]SZ[19]DT[2025-06-09];B[od];W[qd];B[qc];W[rc];B[pc];W[re];B[kc];W[pf])",
+    "sgf": "(;GM[1]FF[4]CA[UTF-8]AP[Sabaki:0.52.2]KM[6.5]SZ[19]DT[2025-06-09];B[qd];W[od];B[oc];W[nc];B[pc];W[nd];B[pe];W[jc])",
     "analysis": {
       "black point": "R16, P17, Q17, Q15",
       "white point": "P16, O17, O16, K17",
