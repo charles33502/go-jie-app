@@ -66,6 +66,11 @@ python app.py
 # 📄 License
 本專案採用 MIT License 授權，詳見 LICENSE 檔案。
 
+# 參考資料
+Nihon Ki-in, “楽しい囲碁入門,” [Online]. Available:https://www.nihonkiin.or.jp/teach/lesson/school/syoubu.html 
+石田芳夫,《初級定石》,  吳仁譯, 世界文物出版社. 
+大竹英雄,《定石的著想》, 倪炳富譯., 凡異出版社.
+
 # 開發者
 陳彥辰（專題設計、題庫設計、前後端整合）
 > 本專題在開發過程中，有使用 ChatGPT 作為技術協助工具。部分程式碼參考並複製自 AI 回覆內容，但所有內容都經由本人理解、判斷與實測後納入，並根據實際需求進行調整。AI 被視為輔助工具，非完全替代開發工作。
