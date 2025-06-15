@@ -69,7 +69,7 @@ python app.py
 # 參考資料
 - Nihon Ki-in, “楽しい囲碁入門,” [Online]. Available:https://www.nihonkiin.or.jp/teach/lesson/school/syoubu.html 
 - 石田芳夫,《初級定石》,  吳仁譯, 世界文物出版社. 
-- 大竹英雄,《定石的著想》, 倪炳富譯., 凡異出版社.
+- 大竹英雄,《定石的著想》, 倪炳富譯, 凡異出版社.
 
 # 開發者
 陳彥辰（專題設計、題庫設計、前後端整合）
